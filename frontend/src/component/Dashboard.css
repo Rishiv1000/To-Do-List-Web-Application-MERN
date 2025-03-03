@@ -1,0 +1,136 @@
+/* General Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Big Screen Sidebar */
+aside#big_screen {
+    width: 18%;
+    background: linear-gradient(135deg, #281133, #014367); /* Gradient Background */
+    margin-right: 2vw;
+    border-radius: 15px;
+    height: 100%;
+    padding-top: 20px;
+    transition: all 0.3s ease;
+}
+
+/* Small Screen Sidebar */
+aside#small_screen {
+    display: none;
+}
+
+#logo_container {
+    width: 100%;
+    height: 20%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    font-size: 1.6em; /* Larger Font Size */
+    font-weight: bold;
+    color: white;
+}
+
+ul {
+    list-style-type: none;
+    padding-top: 30px;
+}
+
+.dash_list {
+    cursor: pointer;
+    padding: 20px 30px;
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    font-size: 1.3em; /* Larger Font Size */
+    color: #fff;
+    transition: all 0.2s ease-in-out;
+}
+
+.dash_list:hover {
+    background-color: rgba(255, 255, 255, 0.1); /* Subtle hover effect */
+    transform: scale(1.05);
+}
+
+#clicked {
+    border-right: 4px solid #f34340;
+    box-shadow: inset -50px 0px 40px rgba(243, 67, 64, 0.5);
+    color: #f34340;
+}
+
+#clicked h5, #clicked i {
+    color: #f34340;
+    font-weight: bold; /* Stronger emphasis */
+}
+
+/* Icon Styles */
+.dash_list i {
+    font-size: 1.5em;
+    color: inherit;
+}
+
+/* Small Screen Sidebar */
+#small_screen {
+    background-color: #2b2f33;
+    position: absolute;
+    z-index: 4;
+    top: 0;
+    right: 0;
+    width: 100%;
+    height: fit-content;
+    box-shadow: 0px 10px 30px rgba(0, 0, 0, 0.2);
+}
+
+#small_screen #logo_container {
+    font-size: 1.4em;
+    color: white;
+}
+
+#small_screen ul {
+    padding-top: 10px;
+}
+
+#small_screen .dash_list {
+    padding: 15px 25px;
+    font-size: 1.2em;
+    color: #fff;
+}
+
+#small_screen .dash_list:hover {
+    background-color: rgba(255, 255, 255, 0.1);
+    transform: scale(1.05);
+}
+
+@media screen and (max-width: 830px) {
+    aside#big_screen {
+        display: none;
+    }
+    aside#small_screen {
+        display: block;
+    }
+}
+
+/* For better visibility and layout optimization on small screens */
+#small_screen .dash_list {
+    font-size: 1.4em; /* Bigger text for smaller screens */
+    padding: 20px 30px;
+    text-align: center;
+}
+
+#small_screen #logo_container {
+    font-size: 1.8em; /* Bigger logo font size */
+    padding: 15px;
+}
+
+/* Responsive adjustments */
+@media screen and (max-width: 600px) {
+    #logo_container {
+        font-size: 1.2em; /* Smaller logo font size for very small screens */
+    }
+    .dash_list {
+        font-size: 1em; /* Adjust text size */
+        padding: 15px;
+    }
+}
